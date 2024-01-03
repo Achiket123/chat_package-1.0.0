@@ -133,6 +133,7 @@ class ChatInputFieldProvider extends ChangeNotifier {
   ChatMessage? _getImageMEssageFromPath(String? path) {
     if (path != null) {
       final imageMessage = ChatMessage(
+        createdAt: DateTime.now(),
         isSender: true,
         chatMedia: ChatMedia(
           url: path,
